@@ -54,3 +54,16 @@ Restart SSH service:
 ```
 sudo systemctl restart ssh
 ```
+
+
+
+
+
+
+
+
+
+
+
+Good youtube videos:  
+https://www.youtube.com/watch?v=fKuqYQdqRIs  
