@@ -49,3 +49,8 @@ sudo vim /etc/ssh/sshd_config
 Change some of the lines as below:  
 > PermitRootLogin no  
 > PasswordAuthentication no
+
+Restart SSH service:
+```
+sudo systemctl restart ssh
+```
