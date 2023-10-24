@@ -19,7 +19,7 @@ Add the following lines at the end to use `192.168.1.113` as the IP (for example
 ## Setting SSH with key
 On local machine:  
 ```
-ssh-keygen -t ed25519 -C "my raspberry pi server" -f ~/.ssh/myserver
+ssh-keygen -t rsa -b 2048 -C "my raspberry pi server" -f ~/.ssh/myserver
 ```
 Press enter when asked to enter passphrase. Keep it blank.
 
@@ -30,4 +30,13 @@ Host myserver
   Hostname p1cashe3
   UpdateHostKeys yes
   IdentityFile ~/.ssh/myserver
+```
+Copy it to the server
+```
+ssh-copy-id -i ~/.ssh/myserver.pub p1c.ash.e3@p1cashe3
+```
+Enter password when prompted.  
+Now login using SSH to server. Now we don't need to specify full username and hostname. It is already specified in `~/.ssh/config`
+```
+ssh myserver
 ```
