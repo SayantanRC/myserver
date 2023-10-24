@@ -40,3 +40,12 @@ Now login using SSH to server. Now we don't need to specify full username and ho
 ```
 ssh myserver
 ```
+
+## Disable password login and root login through SSH
+On server:
+```
+sudo vim /etc/ssh/sshd_config
+```
+Change some of the lines as below:  
+> PermitRootLogin no  
+> PasswordAuthentication no
