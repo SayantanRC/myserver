@@ -55,7 +55,27 @@ Restart SSH service:
 sudo systemctl restart ssh
 ```
 
+## Protect root access
+On server
+1. Update sudeors
+   ```
+   sudo visudo -f /etc/sudoers.d/p1cashe3
+   ```
+   Enter the following
+   ```
+   Defaults        insults
 
+   p1c.ash.e3    ALL = PASSWD: /usr/bin/su
+   ```
+2. Comment out `010_pi-nopasswd` file.
+   ```
+   mv /etc/sudoers.d/010_pi-nopasswd /etc/sudoers.d/.010_pi-nopasswd
+   ```
+4. Set a strong root password and a strong user password. Use the `passwd` command.
+3. Restart sudo with `sudo -k`.
+
+Resources  
+https://www.digitalocean.com/community/tutorials/how-to-edit-the-sudoers-file
 
 
 
