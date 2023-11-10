@@ -13,7 +13,7 @@
    ```
    sudo snap connect nextcloud:network-observe
    ```
-4. Setup data directories:
+4. Setup data directories ([source](https://github.com/nextcloud-snap/nextcloud-snap/wiki/Change-data-directory-to-use-another-disk-partition)):
    ```
    sudo snap connect nextcloud:removable-media
    sudo snap stop nextcloud
@@ -26,8 +26,12 @@
    ```
    'check_data_directory_permissions' => false,
    ```
+   Edit `datadirectory` line in the same file (or add if not present):
+   ```
+   'datadirectory' => '/media/myserver_d1/nextcloud/data',
+   ```
    Restart nextcloud:
    ```
    sudo snap restart nextcloud
    ```
-5. Setup username and password and enjoy
+6. Setup username and password and enjoy
