@@ -2,10 +2,7 @@
 1. Create data directories:
    ```
    cd /media/myserver_d1 # anywhere else
-   mkdir nextcloud
    mkdir -p nextcloud/data
-   mkdir -p nextcloud/custom_apps
-   mkdir -p nextcloud/apps
    ```
 2. Install snap package:
    ```
