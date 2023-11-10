@@ -67,9 +67,10 @@ On server
 
    p1c.ash.e3    ALL = PASSWD: /usr/bin/su
    ```
-2. Comment out `010_pi-nopasswd` file.
+2. Comment out other files.
    ```
-   mv /etc/sudoers.d/010_pi-nopasswd /etc/sudoers.d/.010_pi-nopasswd
+   sudo mv /etc/sudoers.d/010_pi-nopasswd /etc/sudoers.d/.010_pi-nopasswd # raspberry pi os
+   sudo mv /etc/sudoers.d/90-cloud-init-users /etc/sudoers.d/.90-cloud-init-users # ubuntu server
    ```
 4. Set a strong root password and a strong user password. Use the `passwd` command.
 3. Restart sudo with `sudo -k`.
