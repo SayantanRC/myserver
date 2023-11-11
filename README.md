@@ -75,8 +75,6 @@ On server
 4. Set a strong root password and a strong user password. Use the `passwd` command.
 3. Restart sudo with `sudo -k`.
 
-Resources  
-https://www.digitalocean.com/community/tutorials/how-to-edit-the-sudoers-file
 
 
 
@@ -85,7 +83,11 @@ https://www.digitalocean.com/community/tutorials/how-to-edit-the-sudoers-file
 
 
 
+
+Resources:  
+https://www.digitalocean.com/community/tutorials/how-to-edit-the-sudoers-file  
+https://github.com/nextcloud/previewgenerator/issues/233  
 
 Good youtube videos:  
 https://www.youtube.com/watch?v=fKuqYQdqRIs  
-[Dynamic DNS (DDNS) for Free: Remote Access to Home Server](https://www.youtube.com/watch?v=wCJjiHp0d0w)
+[Dynamic DNS (DDNS) for Free: Remote Access to Home Server](https://www.youtube.com/watch?v=wCJjiHp0d0w)  
