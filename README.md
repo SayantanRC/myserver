@@ -88,3 +88,4 @@ https://www.digitalocean.com/community/tutorials/how-to-edit-the-sudoers-file
 
 Good youtube videos:  
 https://www.youtube.com/watch?v=fKuqYQdqRIs  
+[Dynamic DNS (DDNS) for Free: Remote Access to Home Server](https://www.youtube.com/watch?v=wCJjiHp0d0w)
