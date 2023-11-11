@@ -2,5 +2,5 @@
 
 ## Install stuff
 ```
-sudo apt install net-tools network-manager pmount tree
+sudo apt install net-tools network-manager pmount tree ffmpeg php-imagick
 ```
