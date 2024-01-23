@@ -51,8 +51,9 @@ On server - follow guide here: https://github.com/nextcloud-snap/nextcloud-snap/
 2. `sudo mkdir -p /var/snap/nextcloud/bin/`
 3. `sudo mv ~/ff* /var/snap/nextcloud/bin/`
 4. `sudo vim /var/snap/nextcloud/current/nextcloud/config/config.php`; add the following lines:
-   > 'memories.ffmpeg_path' => '/var/snap/nextcloud/bin/ffmpeg',  
-   > 'memories.ffprobe_path' => '/var/snap/nextcloud/bin/ffprobe',  
+   > 'memories.vod.disable' => false,  
+   > 'memories.vod.ffmpeg' => '/var/snap/nextcloud/bin/ffmpeg',  
+   > 'memories.vod.ffprobe' => '/var/snap/nextcloud/bin/ffprobe',  
    > 'ffmpeg' => '/var/snap/nextcloud/bin/ffmpeg',  
    > 'ffprobe' => '/var/snap/nextcloud/bin/ffprobe',  
 5. `sudo snap start nextcloud`
