@@ -35,3 +35,15 @@
    sudo snap restart nextcloud
    ```
 6. Setup username and password and enjoy
+
+## Enable `ffmpeg` for videos
+On local machine  
+1. Download arm64 builds from here: https://johnvansickle.com/ffmpeg/
+2. Extract
+3. Copy to server
+   ```
+   scp /path/to/extracted/ffmpeg myserver:/home/p1c.ash.e3
+   scp /path/to/extracted/ffprobe myserver:/home/p1c.ash.e3
+   ```
+
+On server - follow guide here: https://github.com/nextcloud-snap/nextcloud-snap/issues/1046#issuecomment-1374427458
