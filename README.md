@@ -1,21 +1,5 @@
 # My Raspberry Pi 4 server
 
-## Setting static IP address
-On server:  
-```
-sudo apt install dhcpcd
-sudo reboot
-```
-Followed by
-```
-sudo vim /etc/dhcpcd.conf
-```
-Add the following lines at the end to use `192.168.1.113` as the IP (for example).
-> interface wlan0  
-> static ip_address=192.168.1.113/24  
-> static routers=192.168.1.1  
-> static domain_name_servers=1.1.1.1  
-
 ## Setting SSH with key
 On local machine:  
 ```
@@ -75,8 +59,19 @@ On server
 4. Set a strong root password and a strong user password. Use the `passwd` command.
 3. Restart sudo with `sudo -k`.
 
+## Setting tunnelling with Tailscale and duckdns
 
-
+1. Sign up for a tailscale account at https://login.tailscale.com/start
+2. Follow onscreen prompts to download and install tailscale on the server
+3. Sign up for duckdns at https://www.duckdns.org
+4. Create a subdomain
+5. Go to "install" tab at top and click on "pi". Follow the instructions to create the `duck.sh` file.
+6. Now edit the file as below
+   <pre>
+     <b>IP=`tailscale ip | head -n 1`</b>
+     echo url="https://www.duckdns.org/update?domains=<b>YOUR_DOMAIN</b>&token=<b>YOUR_TOKEN</b>b&ip=<b>$IP</b>" | curl -k -o ~/duckdns/duck.log -K -
+   </pre>
+7. Run the script. Now you should be able to reach the server using the YOUR_DOMAIN.duckdns.org (as long as the other device is also on the same tailscale network.)
 
 
 
