@@ -19,4 +19,4 @@ Which throws an error as:
 sudo -u abc -s /bin/bash -c "php /app/www/public/occ $*"
 ```
 
-`<db_address>` can be found from portainer or [check here]([url](https://stackoverflow.com/a/20686101/10967630)https://stackoverflow.com/a/20686101/10967630).
+`<db_address>` can be found from portainer or [check here](https://stackoverflow.com/a/20686101/10967630).
