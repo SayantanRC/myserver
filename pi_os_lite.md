@@ -2,7 +2,7 @@
 
 ## Install stuff
 ```
-sudo apt install pmount tree ffmpeg
+sudo apt install pmount tree ffmpeg debian-goodies apache2-utils
 ```
 Create cronjob with `crontab -e`. Add this:
 ```
