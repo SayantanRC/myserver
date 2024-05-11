@@ -59,6 +59,9 @@ On server
 4. Set a strong root password and a strong user password. Use the `passwd` command.
 3. Restart sudo with `sudo -k`.
 
+## Increase swap size
+https://pimylifeup.com/raspberry-pi-swap-file/  
+
 ## Setting tunnelling with Tailscale and duckdns
 
 1. Sign up for a tailscale account at https://login.tailscale.com/start
