@@ -65,6 +65,12 @@ https://pimylifeup.com/raspberry-pi-swap-file/
 ## Show memory usage in `docker stats`
 https://stackoverflow.com/a/77278502/10967630  
 
+## Limit memory / CPU for a single docker container
+https://stackoverflow.com/questions/42345235/how-to-specify-memory-cpu-limit-in-docker-compose-version-3  
+
+## Limit total docker usage memory / CPU
+https://unix.stackexchange.com/questions/537645/how-to-limit-docker-total-resources  
+
 ## Setting tunnelling with Tailscale and duckdns
 
 1. Sign up for a tailscale account at https://login.tailscale.com/start
