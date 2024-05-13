@@ -62,6 +62,9 @@ On server
 ## Increase swap size
 https://pimylifeup.com/raspberry-pi-swap-file/  
 
+## Show memory usage in `docker stats`
+https://stackoverflow.com/a/77278502/10967630  
+
 ## Setting tunnelling with Tailscale and duckdns
 
 1. Sign up for a tailscale account at https://login.tailscale.com/start
