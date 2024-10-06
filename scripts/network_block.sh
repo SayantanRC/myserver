@@ -11,5 +11,6 @@ if [[ -z "$container_ip" ]]; then
   echo "No IP found!"
 else
   echo "Blocking IP - $container_ip"
-  sudo iptables -I DOCKER-USER -d $container_ip -o eth0 -j DROP && sudo iptables -I DOCKER-USER -s $container_ip -o eth0 -j DROP
+  sudo iptables -I DOCKER-USER -s $container_ip -o eth0 -j DROP
+  sudo iptables -I DOCKER-USER -d $container_ip -o eth0 -j DROP
 fi
