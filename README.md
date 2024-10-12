@@ -85,7 +85,8 @@ https://unix.stackexchange.com/questions/537645/how-to-limit-docker-total-resour
    </pre>
 7. Run the script. Now you should be able to reach the server using the YOUR_DOMAIN.duckdns.org (as long as the other device is also on the same tailscale network.)
 
-
+## Change DNS
+https://www.cyberciti.biz/faq/howto-linux-bsd-unix-set-dns-nameserver  
 
 
 
