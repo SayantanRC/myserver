@@ -10,3 +10,9 @@ Approve from Tailscale login page
 tailscale set --exit-node=<IP> --exit-node-allow-lan-access=true --accept-routes=true
 ```
 For just accessing Router, we can avoid exit nodes completely, and just use routes.
+
+# use without sudo
+
+```
+sudo tailscale set --operator=$USER
+```
