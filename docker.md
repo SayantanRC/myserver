@@ -9,6 +9,8 @@ sudo usermod -aG docker $USER
 newgrp docker
 ```
 # Expose docker API
+*Source: https://docs.docker.com/engine/daemon/remote-access/*  
+Edit service file
 ```
 sudo systemctl edit docker.service
 ```
