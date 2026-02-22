@@ -1,7 +1,7 @@
 # exit node
 ```
 sudo tailscale set --advertise-exit-node
-sudo tailscale set --advertise-routes=192.168.68.0/24,192.168.29.1/32
+sudo tailscale set --advertise-routes=192.168.68.0/24,192.168.29.0/24
 ```
 Approve from Tailscale login page
 
