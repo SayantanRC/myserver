@@ -11,4 +11,4 @@ address=/pve1-docker3.mylocal.lan/192.168.29.102
 ```
 
 ## Add to tailscale
-Open Tailscale admin page -> "DNS" tab at the top -> Nameserver section
+Open Tailscale admin page -> "DNS" tab at the top -> Nameserver section (enable split dns)
