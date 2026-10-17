@@ -72,3 +72,8 @@ sudo update-ca-certificates
 ### Librewolf
 - Settings -> Privacy & Security -> Connection and software security : Advanced Settings -> Certificates : Manage certificates.
 - "Authorities" tab -> Import -> select the certificate -> check "Trust this CA to identify websites" -> ok
+
+### Android
+- Transfer the `caddy-root.crt` file to the device.
+- Settings -> Security & privacy -> More security settings -> More security and privacy -> Encryption & credentials -> Install a certificate -> CA certificate.
+- Select the file.
