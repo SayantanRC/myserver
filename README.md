@@ -34,6 +34,11 @@ Change some of the lines as below:
 > PermitRootLogin no  
 > PasswordAuthentication no
 
+<b>For Ubuntu server</b> : this file overrides `PasswordAuthentication` to yes, so move it.
+```
+sudo mv /etc/ssh/sshd_config.d/50-cloud-init.conf /etc/ssh/sshd_config.d/50-cloud-init.conf.bak
+```
+
 Restart SSH service:
 ```
 sudo systemctl restart ssh
