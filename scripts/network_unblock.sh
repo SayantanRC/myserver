@@ -13,17 +13,19 @@ if [[ -n "$DOMAIN" ]]; then
   sudo iptables -I DOCKER-USER -s "$container_ip" -d "$DOMAIN" -j ACCEPT
   sudo iptables -I DOCKER-USER -d "$container_ip" -s "$DOMAIN" -j ACCEPT
   sudo iptables -L DOCKER-USER -v -n --line-numbers | grep $container_ip 
-  exit
+else
+  echo "Deleting rules for IP - $container_ip"
+
+  until false; do
+    rule_line="$(sudo iptables -L DOCKER-USER -v -n --line-numbers | grep $container_ip | head -1)"
+    if [[ -z "$rule_line" ]]; then
+      break
+    fi
+    echo "$rule_line"
+    rule_number="$(echo $rule_line | awk '{print $1}')"
+    sudo iptables -D DOCKER-USER $rule_number
+  done
 fi
 
-echo "Deleting rules for IP - $container_ip"
-
-until false; do
-  rule_line="$(sudo iptables -L DOCKER-USER -v -n --line-numbers | grep $container_ip | head -1)"
-  if [[ -z "$rule_line" ]]; then
-    break
-  fi
-  echo "$rule_line"
-  rule_number="$(echo $rule_line | awk '{print $1}')"
-  sudo iptables -D DOCKER-USER $rule_number
-done
+echo
+echo
